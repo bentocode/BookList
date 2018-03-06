@@ -27,11 +27,8 @@ public class Book {
     /** Author of the book */
     private String mAuthor;
 
-    /** Time of publication of the book */
-    private long mTimeInMilliseconds;
-
-    /** Purchase price of the book */
-    private double mPurchasePrice;
+    /** Date of publication of the book */
+    private String mPublicationDate;
 
     /** Website URL of the book */
     private String mUrl;
@@ -44,22 +41,54 @@ public class Book {
      *
      * @param title is the title of the book
      * @param author is the author of the book
-     * @param timeInMilliseconds is the time in milliseconds (from the Epoch) when the
-     *                           book was published
-     * @param purchasePrice is the retail purchase price of the book
+     * @param publicationDate is the date of publication in String format
      * @param url is the website URL to find more details about the book
      *
      * @param coverImageUrl is the URL for the cover image of the book
      */
-    public Book(String title, String author, long timeInMilliseconds, double purchasePrice, String url, String coverImageUrl) {
+    public Book(String title, String author, String publicationDate, String url, String coverImageUrl) {
         mTitle = title;
         mAuthor = author;
-        mTimeInMilliseconds = timeInMilliseconds;
-        mPurchasePrice = purchasePrice;
+        mPublicationDate = publicationDate;
         mUrl = url;
         mCoverImageUrl = coverImageUrl;
     }
 
-//TODO: Define get methods
+    /** Returns the title of the book */
+    public String getTitle(){
+
+        return mTitle;
+
+    }
+
+    /**Returns the author of the book */
+    public String getAuthor(){
+
+        return mAuthor;
+
+    }
+
+    /**Returns the publication date of the book */
+    public String getPublicationDate(){
+
+        return mPublicationDate;
+
+    }
+
+
+    /**Returns the url of the book */
+    public String getBookUrl(){
+
+        return mUrl;
+
+    }
+
+    /**Returns the cover image url of the book */
+    public String getCoverImageUrl(){
+
+        return mCoverImageUrl;
+
+    }
+
 }
 
